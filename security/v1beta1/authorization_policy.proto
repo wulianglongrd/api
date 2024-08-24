@@ -15,6 +15,7 @@ syntax = "proto3";
 
 import "google/api/field_behavior.proto";
 import "type/v1beta1/selector.proto";
+import "networking/v1alpha3/virtual_service.proto";
 
 // $schema: istio.security.v1beta1.AuthorizationPolicy
 // $title: Authorization Policy
@@ -553,5 +554,5 @@ message Condition {
   repeated string not_values = 3;
 
   // TODO add comments
-  istio.type.v1beta1.StringMatch match = 4;
+  istio.networking.v1alpha3.StringMatch match = 4;
 }

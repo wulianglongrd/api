@@ -39,17 +39,6 @@ func (this *PolicyTargetReference) UnmarshalJSON(b []byte) error {
 	return SelectorUnmarshaler.Unmarshal(bytes.NewReader(b), this)
 }
 
-// MarshalJSON is a custom marshaler for StringMatch
-func (this *StringMatch) MarshalJSON() ([]byte, error) {
-	str, err := SelectorMarshaler.MarshalToString(this)
-	return []byte(str), err
-}
-
-// UnmarshalJSON is a custom unmarshaler for StringMatch
-func (this *StringMatch) UnmarshalJSON(b []byte) error {
-	return SelectorUnmarshaler.Unmarshal(bytes.NewReader(b), this)
-}
-
 var (
 	SelectorMarshaler   = &jsonpb.Marshaler{}
 	SelectorUnmarshaler = &jsonpb.Unmarshaler{AllowUnknownFields: true}
