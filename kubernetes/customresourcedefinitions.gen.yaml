@@ -14133,7 +14133,7 @@ spec:
                           key:
                             description: The name of an Istio attribute.
                             type: string
-                          matches:
+                          match:
                             oneOf:
                             - not:
                                 anyOf:
@@ -14507,7 +14507,7 @@ spec:
                           key:
                             description: The name of an Istio attribute.
                             type: string
-                          matches:
+                          match:
                             oneOf:
                             - not:
                                 anyOf:

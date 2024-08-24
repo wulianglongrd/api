@@ -553,5 +553,5 @@ message Condition {
   repeated string not_values = 3;
 
   // TODO add comments
-  istio.type.v1beta1.StringMatch matches = 4;
+  istio.type.v1beta1.StringMatch match = 4;
 }
