@@ -129,3 +129,18 @@ message PolicyTargetReference {
   // +kubebuilder:validation:XValidation:message="cross namespace referencing is not currently supported",rule="self.size() == 0"
   string namespace = 4;
 }
+
+// TODO add comments
+message StringMatch {
+  oneof match_type {
+
+    // exact string match
+    string exact = 1;
+
+    // prefix-based match
+    string prefix = 2;
+
+    // [RE2 style regex-based match](https://github.com/google/re2/wiki/Syntax).
+    string regex = 3;
+  }
+}
