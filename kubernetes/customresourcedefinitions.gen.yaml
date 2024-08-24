@@ -14133,6 +14133,31 @@ spec:
                           key:
                             description: The name of an Istio attribute.
                             type: string
+                          matches:
+                            oneOf:
+                            - not:
+                                anyOf:
+                                - required:
+                                  - exact
+                                - required:
+                                  - prefix
+                                - required:
+                                  - regex
+                            - required:
+                              - exact
+                            - required:
+                              - prefix
+                            - required:
+                              - regex
+                            properties:
+                              exact:
+                                type: string
+                              prefix:
+                                type: string
+                              regex:
+                                description: '[RE2 style regex-based match](https://github.com/google/re2/wiki/Syntax).'
+                                type: string
+                            type: object
                           notValues:
                             description: Optional.
                             items:
@@ -14482,6 +14507,31 @@ spec:
                           key:
                             description: The name of an Istio attribute.
                             type: string
+                          matches:
+                            oneOf:
+                            - not:
+                                anyOf:
+                                - required:
+                                  - exact
+                                - required:
+                                  - prefix
+                                - required:
+                                  - regex
+                            - required:
+                              - exact
+                            - required:
+                              - prefix
+                            - required:
+                              - regex
+                            properties:
+                              exact:
+                                type: string
+                              prefix:
+                                type: string
+                              regex:
+                                description: '[RE2 style regex-based match](https://github.com/google/re2/wiki/Syntax).'
+                                type: string
+                            type: object
                           notValues:
                             description: Optional.
                             items:
